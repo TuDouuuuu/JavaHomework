@@ -1,25 +1,19 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-
+import javax.swing.text.*;
 
 import java.util.*;
 import java.io.*;
 public class Main{
     public static void main(String args[]){
         Frame frm = new Frame("201806060825－叶璇－Java程序设计综合实验");
-        // Frame.Mainfun();
-        // Frame.centerWindow(frm);
     }
-}
-
-class MenuBar extends JMenuBar{
-
 }
 
 
 class Frame extends JFrame{
-    // static JMenuBar mb = new JMenuBar();
+    static JMenuBar mb = new JMenuBar();
     static JToolBar mt = new JToolBar();
     static JTextArea ma = new JTextArea();
 
@@ -65,6 +59,8 @@ class Frame extends JFrame{
         addMenue(); // 菜单
         addToolBar();   // 工具栏
         addTextArea();  // 文本编辑框
+        // ma.setFont(new Font("黑体",Font.BOLD,20));
+        // // ma.setBackground(Color.RED);
         centerWindow();// 居中显示
         
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

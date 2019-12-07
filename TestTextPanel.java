@@ -17,29 +17,31 @@ public class TestTextPanel {
     public void init(javax.swing.text.Document doc) {
         textPane.setDocument(doc);        
         javax.swing.text.SimpleAttributeSet attributeSet=new javax.swing.text.SimpleAttributeSet();
-        javax.swing.text.StyleConstants.setFirstLineIndent(attributeSet,80);
-        javax.swing.text.StyleConstants.setForeground(attributeSet,java.awt.Color.red);
-        javax.swing.text.StyleConstants.setFontSize(attributeSet,20);                
+        // javax.swing.text.StyleConstants.setFirstLineIndent(attributeSet,80);
+        // javax.swing.text.StyleConstants.setForeground(attributeSet,java.awt.Color.red);
+        // javax.swing.text.StyleConstants.setFontSize(attributeSet,20);                
         try{
-            textPane.setParagraphAttributes(attributeSet,true) ;
+            // textPane.setParagraphAttributes(attributeSet,true) ;
+            javax.swing.text.StyleConstants.setFontSize(attributeSet,60);
             doc.insertString(0,"红色小字体",attributeSet);
-            javax.swing.text.StyleConstants.setFontSize(attributeSet,40);
-            doc.insertString(doc.getLength(),"红色中字体",attributeSet);
-            javax.swing.text.StyleConstants.setFontSize(attributeSet,60);
-            doc.insertString(doc.getLength(),"红色大字体\n",attributeSet); 
-            
-            attributeSet=new javax.swing.text.SimpleAttributeSet();
-            javax.swing.text.StyleConstants.setForeground(attributeSet,java.awt.Color.green);
-            textPane.setCaretPosition(doc.getLength());
-            javax.swing.text.StyleConstants.setFirstLineIndent(attributeSet,140);
-            textPane.setParagraphAttributes(attributeSet,true) ;        
-            doc.insertString(doc.getLength(),"缩进更大",attributeSet);             
             javax.swing.text.StyleConstants.setFontSize(attributeSet,20);
-            doc.insertString(doc.getLength(),"绿色小字体",attributeSet);    
-            javax.swing.text.StyleConstants.setFontSize(attributeSet,40);
-            doc.insertString(doc.getLength(),"绿色中字体",attributeSet);      
-            javax.swing.text.StyleConstants.setFontSize(attributeSet,60);
-            doc.insertString(doc.getLength(),"绿色大字体\n",attributeSet);      
+            // javax.swing.text.StyleConstants.setFontSize(attributeSet,40);
+            // doc.insertString(doc.getLength(),"红色中字体",attributeSet);
+            
+            // doc.insertString(0,"红色大字体\n",attributeSet); 
+            
+            // attributeSet=new javax.swing.text.SimpleAttributeSet();
+            // javax.swing.text.StyleConstants.setForeground(attributeSet,java.awt.Color.green);
+            // textPane.setCaretPosition(doc.getLength());
+            // javax.swing.text.StyleConstants.setFirstLineIndent(attributeSet,140);
+            // textPane.setParagraphAttributes(attributeSet,true) ;        
+            // doc.insertString(doc.getLength(),"缩进更大",attributeSet);             
+            // javax.swing.text.StyleConstants.setFontSize(attributeSet,20);
+            // doc.insertString(doc.getLength(),"绿色小字体",attributeSet);    
+            // javax.swing.text.StyleConstants.setFontSize(attributeSet,40);
+            // doc.insertString(doc.getLength(),"绿色中字体",attributeSet);      
+            // javax.swing.text.StyleConstants.setFontSize(attributeSet,60);
+            // doc.insertString(doc.getLength(),"绿色大字体\n",attributeSet);      
             
         }catch(Exception e){e.printStackTrace(System.out);}           
     }     
